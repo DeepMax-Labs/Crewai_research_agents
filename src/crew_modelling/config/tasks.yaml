@@ -1,0 +1,99 @@
+Planning_task:
+  description: >
+    Create a research outline including sections like Introduction, Literature Review, Methodology, 
+    Results, Conclusion and Recommendation.
+    Break down tasks based on the thesis requirements and timeline.
+    Set research questions, help structure the thesis outline and guide the Literature Review Agent in 
+    gathering relevant sources.
+  expected_output: >
+    A structured thesis plan document outlining each section of the research, which will serve as a guide
+     throughout the project. It ensures clarity on what needs to be written for each part of the thesis.
+  agent: Research_Planner
+
+Literature_Research_task:
+  description: >
+    Search for relevant academic literature using specified keywords, databases, and citation networks.
+    Curate a collection of the most relevant sources, focusing on quality, relevance, and recency.
+    Extract key information, such as study objectives, methods, and conclusions from the papers.
+  expected_output: >
+    A well-organized list of relevant research papers with detailed annotations summarizing key points
+    and findings. This will guide the next agent in crafting the literature review section.
+  agent: Literature_Review_Researcher
+
+Literature_Review_writing_task:
+  description: >
+    Synthesize the collected research papers, drawing out key themes, trends, and gaps in the literature.
+    Write a cohesive literature review section that aligns with the research questions and objectives.
+    Critically analyze the sources, highlighting areas of agreement, disagreement, and gaps for future 
+    research.
+    Properly cite each source following the required academic citation style.
+  expected_output: >
+    A written literature review section that provides a comprehensive overview of the current state of
+     research, framed within the thesis, and includes proper citations.
+  agent: Literature_Review_Writer
+
+Data_Collecting_task:
+  description: >
+    Fetch and download relevant data for analysis.
+    Organize and store the data in a structured format for further preprocessing or analysis.
+  expected_output: >
+    A collected dataset (e.g., CSV, JSON) containing the raw data required for the research, ready for
+     preprocessing. This is essential for data-driven research like climate modeling, machine learning
+      projects, etc.
+  agent: Data_Collector_Agent
+
+Data_Preprocessing_task:
+  description: >
+    Handle missing data, remove outliers, normalize or scale features, and format the data properly.
+    Ensure the dataset is suitable for use in machine learning models or statistical analysis.
+  expected_output: >
+    A preprocessed dataset (cleaned and transformed data), saved in a structured file that is ready for 
+    further analysis or model training. This version of the data ensures accuracy and consistency.
+  agent: Data_Preprocessing_Agent
+
+Result_Analysis_task:
+  description: >
+   Statistical Analysis: Perform tests like correlation, regression, or ANOVA (for quantitative data).
+   Data Visualization: Create graphs and charts to visually represent trends or distributions.
+   Qualitative Analysis: Summarize key themes from non-numerical data, like interviews or surveys.
+   Interpretation: Provide insights and explanations based on the analysis.
+   Ensures that the data analysis directly addresses the research questions, structuring the outputs 
+   (statistical reports, qualitative summaries) to answer them.
+  expected_output: >
+   Statistical reports or qualitative summaries.
+   Visualizations (e.g., graphs, charts).
+   Interpretation of findings to be included in the thesis's Results and Discussion sections.
+   A set of recommendations based on the findings and analysis, addressing potential actions for
+    industry, policy, or further academic research.
+  agent: Results_Analysis_Agent
+
+Documentation_task:
+  description: >
+   Collect all completed sections from different agents.
+   Merge and format the thesis, ensuring that all sections 
+   flow logically and adhere to the specified academic standards.
+  expected_output: >
+   A complete thesis document comprising 55 pages(formatted as a Word or PDF file) that includes all sections, 
+   fully written and structured. This document is ready for submission or final review.
+  agent: Documentation_Agent
+
+Bibliography_task:
+  description: >
+   Collect citations from the literature review and other parts of the thesis.
+   Format the references according to the required citation style.
+  expected_output: >
+   A formatted bibliography or references list, which is ready to be included in the 
+   thesis. This ensures that all sources used in the research are properly credited. 
+  agent: Bibliography_Agent
+
+Presentation_task:
+  description: >
+   Summarize the key sections of the thesis into slides, ensuring concise and clear communication of the
+   main findings.
+   Create visual aids for effective presentatio
+  expected_output: >
+   presentation file (e.g., PowerPoint) with slides that summarize the thesis, ready for presentation
+   during a defense or academic seminar. 
+agent: Presentation_Agent
+
+   
